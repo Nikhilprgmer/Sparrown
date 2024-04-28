@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style>
+        /* CSS for the background image */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/img/Sp4.jpeg'); /* Replace 'your_background_image.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: rgba(0,0,0,0.5); /* Transparent black overlay */
+            font-family: Arial, sans-serif;
+        }
+        /* Style for the container */
+        #container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: rgb(229, 255, 0);
+            text-align: center;
+            padding: 120px;
+            box-sizing: border-box;
+            text-shadow: 3px 3px 5px rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--border-color, rgb(242, 255, 0));
+            --gradient: #0000 90deg, #000 0;
+            --pattern: var(--border-width, 60px) var(--border-width, 60px) no-repeat;
+            --mask: 
+                conic-gradient(from 90deg at top var(--border-thickness, 6px) left var(--border-thickness, 6px), var(--gradient)) 0 0 / var(--pattern),
+                conic-gradient(from 180deg at top var(--border-thickness, 6px) right var(--border-thickness, 6px), var(--gradient)) 100% 0 / var(--pattern),
+                conic-gradient(from 0deg at bottom var(--border-thickness, 6px) left var(--border-thickness, 6px), var(--gradient)) 0 100% / var(--pattern),
+                conic-gradient(from -90deg at bottom var(--border-thickness, 6px) right var(--border-thickness, 6px), var(--gradient)) 100% 100% / var(--pattern);
+            
+            -webkit-mask: var(--mask);
+                    mask: var(--mask);
+        } 
+        /* Style for the modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%; /* Full width */
+            height: 20%; /* Full height */
+
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #61ffef;
+            margin: auto; /* Center the modal vertically and horizontally */
+            padding: 80px;
+            border: 3px solid #060606;
+            width: 50%; /* Could be more or less, depending on screen size */
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 4%;
+        }
+        button:hover {
+            background-color:#000dfd;
+            color: white;
+        }
+        #closeBtn {
+            margin-top: 5%;
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p><b>Please Connect Headphones</b></p> 
+    </div>
+    <div id="front">
+        <button id="okBtn"><b>OK</b></button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p><strong>Did You Connect the Headphone ??</strong></p>
+            <button id="closeBtn">Yes</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("okBtn");
+
+        // Get the close button inside the modal
+        var closeBtn = document.getElementById("closeBtn");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on the close button, close the modal and redirect to page 2
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            window.location.href = "Sparrow.html";
+        }
+    </script>
+</body>
+</html>

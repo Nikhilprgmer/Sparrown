@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparrow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    #container_sp {
+            position: absolute;
+            top: 2%;
+            right: -5%;
+            text-align: center;
+            z-index: 2; /* Ensure the container appears above the video */
+            border-radius: 1.25em; /* 10px converted to em */
+            padding: 1.25em; /* 20px converted to em */
+            width: 18.75em; /* 300px converted to em */
+            margin: 0 auto;
+        }
+        p {
+            color: black;
+        }
+</style>
+</head>
+<body>
+    <!-- Add audio element -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="/Media/Song.perfect.mp3" type="audio/mp3">
+    </audio>
+    
+    <div id="videoContainer">
+        <!-- Add video element -->
+        <video id="bgVideo" autoplay muted loop>
+            <source src="/Media/Sparrow2.mp4" type="video/mp4">
+        </video>
+        <div class="card">
+            <div class="card-page cart-page-front">
+                <div class="card-page cart-page-outside"></div>
+                <div class="card-page cart-page-inside">
+                    <span class="letter-card"></span>
+                        </div>
+                          </div>
+                            <div class="card-page cart-page-bottom">
+                              <p class="let"><b>Heyyyy👋</b><br>
+                                <strong>One day, an innocent, shy girl stood at the bus stop and waited for the bus. This is the first time I have seen you. I want to talk to you at that time, but I don't have the guts to approach you. It took me 8 days to start talking with you 😅. I don't know where I got the courage from. I have been wanting to tell you for a long time. But, at the same time, I'm afraid of what might happen? Aaj Himmat ki hai batane ki......... I am falling in love ❤️ with you. whenever I am thinking about you. I am getting butterflies 🦋 in my heart. I like talking with you. Youuuu are just amazing Same as I want to be. I don't know what you think about me, but whatever it is, I am honored. I am waiting for your reply. hoping that maybe, just maybe, you feel the same way too. 🤞
+                                    <br></strong>
+                                    <strong>Looking forward to hearing from you soon. ❤️</strong></p>
+                                </div>
+                              </div>
+                              <span class="click-icon">Click On It<br><i class="fas fa-hand-point-right"></i>
+                              </span>
+                            </svg>
+                     </span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Container with content -->
+<div id="container_sp">
+    <button id="proceedBtn1">Proceed</button>
+</div>
+    <!-- Control panel -->
+    <div id="controlPanel">
+        <!-- Backward button -->
+        <button id="backwardBtn" class="controlBtn"><i class="fas fa-backward"></i></button>
+        <!-- Play/Pause button -->
+        <button id="playBtn" class="controlBtn playing"><i class="fa fa-pause"></i></button>
+        <!-- forward button -->
+        <button id="forwardBtn" class="controlBtn"><i class="fas fa-forward"></i></button>
+    </div>
+    <!-- Music control -->
+    <div id="musicControl">
+        <!-- Repeat button -->
+        <button id="repeatBtn" class="controlBtn"><i class="fa fa-music"></i></button>
+        <!-- Play/Pause button -->
+        <button id="musicPlayBtn" class="controlBtn playing">Pause</button>
+    </div>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+</body>
+</html>
